@@ -134,7 +134,6 @@ latexpdf:
 	#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	@echo "pdflatex finished; see $(PDF)"
 
-/latex."
 
 latexpdfja:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex

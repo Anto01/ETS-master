@@ -135,6 +135,13 @@ latexpdf:
 	@echo "pdflatex finished; see $(PDF)"
 
 
+
+buildandcommithtml: html latexpdf
+	cd $(BUILDDIR)/html; git add . ; git commit -m "rebuilt docs"; git push origin gh-pages
+
+
+
+
 latexpdfja:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo "Running LaTeX files through platex and dvipdfmx..."
